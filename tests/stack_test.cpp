@@ -3,8 +3,8 @@
 #include <gmock/gmock.h>
 
 // Local Includes
-#include <collections/cpp_stack.hpp>
+#include <collections/stack.hpp>
 
-namespace cpp_stack_testing {
+namespace collections::stack_testing {
 
-} // namespace cpp_stack_testing
+} // namespace collections::stack_testing
