@@ -61,18 +61,18 @@ if(NOT CMAKE_SKIP_INSTALL_RULES)
 endif()
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Target: cpp_stack_headers
-# Alias: collections::cpp_stack_headers
+# Target: stack_headers
+# Alias: collections::stack_headers
 # Type: Interface Library
 #-----------------------------------------------------------------------------------------------------------------------
 # Target definition
-add_library(cpp_stack_headers INTERFACE)
+add_library(stack_headers INTERFACE)
 
 # Target alias
-add_library(collections::cpp_stack_headers ALIAS cpp_stack_headers)
+add_library(collections::stack_headers ALIAS stack_headers)
 
 # Target headers
-target_include_directories(cpp_stack_headers
+target_include_directories(stack_headers
     INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
