@@ -5,30 +5,30 @@ include(GoogleTest)
 enable_testing()
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Target: cpp_stack_test
-# Alias: collections::cpp_stack_test
+# Target: stack_test
+# Alias: collections::stack_test
 # Type: Executable
-# Dependencies: GTest::gtest_main, GTest::gmock_main, collections::cpp_stack_headers
+# Dependencies: GTest::gtest_main, GTest::gmock_main, collections::stack_headers
 #-----------------------------------------------------------------------------------------------------------------------
 # Target definition
-add_executable(cpp_stack_test)
+add_executable(stack_test)
 
 # Target alias
-add_executable(collections::cpp_stack_test ALIAS cpp_stack_test)
+add_executable(collections::stack_test ALIAS stack_test)
 
 # Target sources
-target_sources(cpp_stack_test
+target_sources(stack_test
     PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/cpp_stack_test.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/stack_test.cpp
 )
 
 # Target dependencies
-target_link_libraries(cpp_stack_test
+target_link_libraries(stack_test
     PRIVATE
-        collections::cpp_stack_headers
+        collections::stack_headers
         GTest::gtest_main
         GTest::gmock_main
 )
 
 # Test discovery
-gtest_discover_tests(cpp_stack_test)
+gtest_discover_tests(stack_test)
