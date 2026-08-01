@@ -5,7 +5,7 @@
 #include <iostream>
 
 // Local Includes
-#include <collections/cpp_stack.hpp>
+#include <collections/stack.hpp>
 
 auto main() -> int {
     std::println(std::cout, "Hello world!");
