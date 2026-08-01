@@ -2,7 +2,7 @@
 # Information
 #-----------------------------------------------------------------------------------------------------------------------
 cmake_minimum_required(VERSION 4.3.0)
-project("cpp_stack"
+project("stack"
         VERSION 0.1.0
         DESCRIPTION ""
         LANGUAGES CXX
@@ -79,26 +79,26 @@ target_include_directories(cpp_stack_headers
 )
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Target: cpp_stack
-# Alias: collections::cpp_stack
+# Target: stack
+# Alias: collections::stack
 # Type: Interface Library
-# Dependencies: collections::cpp_stack_headers
+# Dependencies: collections::stack_headers
 #-----------------------------------------------------------------------------------------------------------------------
 # Target definition
-add_library(cpp_stack INTERFACE)
+add_library(stack INTERFACE)
 
 # Target alias
-add_library(collections::cpp_stack ALIAS cpp_stack)
+add_library(collections::stack ALIAS stack)
 
 # Target dependencies
-target_link_libraries(cpp_stack
+target_link_libraries(stack
     INTERFACE
-        collections::cpp_stack_headers
+        collections::stack_headers
 )
 
 # Target properties
-set_target_properties(cpp_stack PROPERTIES
-        OUTPUT_NAME cpp_stack
+set_target_properties(stack PROPERTIES
+        OUTPUT_NAME stack
         VERSION ${PROJECT_VERSION}
         SOVERSION ${PROJECT_VERSION_MAJOR}
         CXX_VISIBILITY_PRESET hidden
@@ -106,12 +106,12 @@ set_target_properties(cpp_stack PROPERTIES
 )
 
 if(NOT CMAKE_SKIP_INSTALL_RULES)
-    # Install cpp_stack
-    install(TARGETS cpp_stack
-            RUNTIME COMPONENT cpp_stack
-            LIBRARY COMPONENT cpp_stack
-            NAMELINK_COMPONENT cpp_stack
-            ARCHIVE COMPONENT cpp_stack
+    # Install stack
+    install(TARGETS stack
+            RUNTIME COMPONENT stack
+            LIBRARY COMPONENT stack
+            NAMELINK_COMPONENT stack
+            ARCHIVE COMPONENT stack
             INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 endif()
 
